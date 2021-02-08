@@ -1,7 +1,6 @@
 package com.minh.notes.entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "notes")
