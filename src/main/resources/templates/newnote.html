@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Note</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<textarea id="note_snippet" style="color: aqua">...</textarea><br>
+<button id="send_note" type="submit" onclick="send()">Submit</button>
+<script type="text/javascript">
+    function send() {
+        let object = {
+            "note": document.getElementById("note_snippet").value
+        };
+
+        let json = JSON.stringify(object);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", '/api/notes/new', false)
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+
+        if (xhr.status === 200) {
+            alert("Success!");
+        }
+    }
+</script>
+<!--<style>-->
+<!--    body{-->
+<!--        background: #000000;-->
+<!--    }-->
+<!--    button {-->
+<!--        background-color: #4CAF50;-->
+<!--        border: none;-->
+<!--        color: white;-->
+<!--        padding: 13px 32px;-->
+<!--        text-align: center;-->
+<!--        text-decoration: none;-->
+<!--        display: inline-block;-->
+<!--        font-size: 16px;-->
+<!--        margin-left: 93.5%;-->
+<!--        cursor: pointer;-->
+
+<!--    }-->
+
+<!--    textarea {-->
+<!--        border: solid;-->
+<!--        width: 99%;-->
+<!--        height: 500px;-->
+<!--        background: #2b0056;-->
+<!--    }-->
+<!--</>-->
+
+</body>
+</html>

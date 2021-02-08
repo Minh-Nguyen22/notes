@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div th:each="eachNote : ${allNotesStore}">
+    <span id="load_date" th:text="${eachNote.getDateAndTime()}"></span><br><br>
+    <strong id="note_id">Id: <code th:text="${eachNote.getId()}"></code></strong>
+    <pre id="note_snippet" th:text="${eachNote.getNote()}"></pre>
+</div><br>
+</body>
+</html>

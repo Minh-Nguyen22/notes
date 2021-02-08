@@ -1,0 +1,61 @@
+body{
+    background: #ffaeae;
+}
+div{
+    border: solid #fffc00;
+    width: 30%;
+    margin-left: 35%;
+}
+#load_date{
+    margin-left: 1%;
+    margin-top: 50%;
+    margin-bottom: 2%;
+    padding: 1%;
+    color: #29e032;
+    font-weight: bold;
+    text-shadow: black 0px 0px 2px;
+}
+#note_id{
+    border: solid #fffc00;
+    background: #ffaeae;
+    color: #000bff;
+    box-sizing: border-box;
+    width: 20%;
+    height: 20%;
+    margin-left: 25%;
+}
+pre{
+    border: solid #fffc00;
+    background: #ffaeae;
+    color: #00ffff;
+    box-sizing: border-box;
+    width: 96%;
+    height: 30%;
+    margin-left: 2%;
+    font-weight: bolder;
+    text-shadow: black 0 0 2px;
+    font-size: 20px;
+    word-wrap: break-word;
+    white-space:  pre-wrap;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 93.5%;
+    cursor: pointer;
+}
+
+textarea {
+    border: solid;
+    width: 51%;
+    height: 50%;
+    margin-left: 25%;
+    background: #2b0056;
+}

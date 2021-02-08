@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div>
+    <span id="load_date" th:text="${note.getDateAndTime()}"></span><br><br>
+    <strong id="note_id">Id: <code th:text="${note.getId()}"></code></strong>
+    <pre id="note_snippet"><code th:text="${note.getNote()}"></code></pre>
+</div>
+<br>
+</body>
+</html>
